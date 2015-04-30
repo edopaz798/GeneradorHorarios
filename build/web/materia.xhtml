@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>CRUD Materia</title>
+    </h:head>
+    <h:body>
+        <h:form id="formulario">
+            <p:growl id="gr" showDetail="true" />  
+            <p:panel header="Registro de Datos">
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Nombre"/>
+                    <p:inputText value="#{mbMateria.materia.nombre}" />
+                    <p:outputLabel value="Horas Preseniales"/>
+                    <p:inputText value="#{mbMateria.materia.horasPresenciales}" />
+                </p:panelGrid>
+                <p:commandButton value="Guardar" update=":formulario"
+                                 action="#{mbMateria.accionGuardar()}" />
+            </p:panel>
+            <p:panel header="Datos Registrados">
+                <p:dataTable value="#{mbMateria.lista}" var="fila" editable="true" editMode="cell">
+                    <p:column headerText="Nombre">
+                        <p:outputLabel value="#{fila.nombre}" />
+                    </p:column>
+                    <p:column headerText="Horas Preseniales">
+                        <p:outputLabel value="#{fila.horasPresenciales}" />
+                    </p:column>
+                    <p:column headerText="Editar">
+                        <p:commandLink value="Editar" update=":formulario"
+                                       action="#{mbMateria.accionEditar(fila)}" />
+                    </p:column>
+                    <p:column headerText="Eliminar">
+                        <p:commandLink value="Eliminar" update=":formulario"
+                                       action="#{mbMateria.accionEliminar(fila)}" />  
+                    </p:column>
+                </p:dataTable>
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+

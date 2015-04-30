@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>CRUD DetalleHorario</title>
+    </h:head>
+    <h:body>
+        <h:form id="formulario">
+            <p:growl id="gr" showDetail="true" />  
+            <p:panel header="Registro de Datos">
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Materia"/>
+                    <p:selectOneMenu id="console" value="#{mbDetalleHorario.detalleHorario.materia}" style="width:125px">
+                        <f:selectItem itemLabel="Selecciona" itemValue="" />
+                        <f:selectItems value="#{mbMateria.lista}" />
+                    </p:selectOneMenu>
+                    <p:outputLabel value="Docente"/>
+                    <p:selectOneMenu id="console" value="#{mbDetalleHorario.detalleHorario.docente}" style="width:125px">
+                        <f:selectItem itemLabel="Selecciona" itemValue="" />
+                        <f:selectItems value="#{mbDocente.lista}" />
+                    </p:selectOneMenu>
+                    <p:outputLabel value="Facultad"/>
+                    <p:selectOneMenu id="console" value="#{mbDetalleHorario.detalleHorario.facultad}" style="width:125px">
+                        <f:selectItem itemLabel="Selecciona" itemValue="" />
+                        <f:selectItems value="#{mbFacultad.lista}" />
+                    </p:selectOneMenu>
+                    <p:outputLabel value="Semestre"/>
+                    <p:selectOneMenu id="console" value="#{mbDetalleHorario.detalleHorario.semestre}" style="width:125px">
+                        <f:selectItem itemLabel="Selecciona" itemValue="" />
+                        <f:selectItems value="#{mbSemestre.lista}" />
+                    </p:selectOneMenu>
+                </p:panelGrid>
+                <p:commandButton value="Guardar" update=":formulario"
+                                 action="#{mbDetalleHorario.accionGuardar()}" />
+            </p:panel>
+            <p:panel header="Datos Registrados">
+                <p:dataTable value="#{mbDetalleHorario.lista}" var="fila" editable="true" editMode="cell">
+                    <p:column headerText="Materia">
+                        <p:outputLabel value="#{fila.materia}" />
+                    </p:column>
+                    <p:column headerText="Docente">
+                        <p:outputLabel value="#{fila.docente}" />
+                    </p:column>
+                    <p:column headerText="Facultad">
+                        <p:outputLabel value="#{fila.facultad}" />
+                    </p:column>
+                    <p:column headerText="Semestre">
+                        <p:outputLabel value="#{fila.semestre}" />
+                    </p:column>
+                    <p:column headerText="Editar">
+                        <p:commandLink value="Editar" update=":formulario"
+                                       action="#{mbDetalleHorario.accionEditar(fila)}" />
+                    </p:column>
+                    <p:column headerText="Eliminar">
+                        <p:commandLink value="Eliminar" update=":formulario"
+                                       action="#{mbDetalleHorario.accionEliminar(fila)}" />  
+                    </p:column>
+                </p:dataTable>
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>CRUD Salon</title>
+    </h:head>
+    <h:body>
+        <h:form id="formulario">
+            <p:growl id="gr" showDetail="true" />  
+            <p:panel header="Registro de Datos">
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="Nombre"/>
+                    <p:inputText value="#{mbSalon.salon.nombre}" />
+                    <p:outputLabel value="Bloque"/>
+                    <p:selectOneMenu id="console" value="#{mbSalon.salon.bloque}" style="width:125px">
+                        <f:selectItem itemLabel="Selecciona" itemValue="" />
+                        <f:selectItems value="#{mbBloque.lista}" var="fila" itemLabel="#{fila.nombre}" itemValue="#{fila.id}"/>
+                    </p:selectOneMenu>
+                </p:panelGrid>
+                <p:commandButton value="Guardar" update=":formulario"
+                                 action="#{mbSalon.accionGuardar()}" />
+            </p:panel>
+            <p:panel header="Datos Registrados">
+                <p:dataTable value="#{mbSalon.lista}" var="fila" editable="true" editMode="cell">
+                    <p:column headerText="Nombre">
+                        <p:outputLabel value="#{fila.nombre}" />
+                    </p:column>
+                    <p:column headerText="Bloque">
+                        <p:outputLabel value="#{fila.bloque}" />
+                    </p:column>
+                    <p:column headerText="Editar">
+                        <p:commandLink value="Editar" update=":formulario"
+                                       action="#{mbSalon.accionEditar(fila)}" />
+                    </p:column>
+                    <p:column headerText="Eliminar">
+                        <p:commandLink value="Eliminar" update=":formulario"
+                                       action="#{mbSalon.accionEliminar(fila)}" />  
+                    </p:column>
+                </p:dataTable>
+            </p:panel>
+        </h:form>
+    </h:body>
+</html>
+

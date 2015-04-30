@@ -1,0 +1,563 @@
+// Archivo para carga de datos
+// Estas lineas seran ignoradas por el software
+// El primer caracter de la linea significa el tipo de dato a guardar
+// 1. Bloque [*]
+// 2. DetalleHorario [*]
+// 3. Dia [*]
+// 4. Docente [*]
+// 5. Facultad [*]
+// 6. Hora [*]
+// 7. Horario [ ]
+// 8. HorarioLaborable [*]
+// 9. MateriaB [*]
+// a. Paralelo [*] 
+// b. ProfesorProhibicion [ ]
+// c. Salon [*]
+// d. SalonTipo [*]
+// e. Semestre [*]
+// separar los datos por comas, las entradas no numericas en comillas, las referencias comillas simples.
+// Inicio:
+3. "Lunes"
+3. "Martes"
+3. "Miercoles"
+3. "Jueves"
+3. "Viernes"
+3. "Sabado"
+3. "Domingo"
+6. "00:00 - 01:00"
+6. "01:00 - 02:00"
+6. "02:00 - 03:00"
+6. "03:00 - 04:00"
+6. "04:00 - 05:00"
+6. "05:00 - 06:00"
+6. "06:00 - 07:00"
+6. "07:00 - 08:00"
+6. "08:00 - 09:00"
+6. "09:00 - 10:00"
+6. "10:00 - 11:00"
+6. "11:00 - 12:00"
+6. "12:00 - 13:00"
+6. "13:00 - 14:00"
+6. "14:00 - 15:00"
+6. "15:00 - 16:00"
+6. "16:00 - 17:00"
+6. "17:00 - 18:00"
+6. "18:00 - 19:00"
+6. "19:00 - 20:00"
+6. "20:00 - 21:00"
+6. "21:00 - 22:00"
+6. "22:00 - 23:00"
+6. "23:00 - 24:00"
+6. "24:00 - 00:00"
+5, "Ingenieria de Sistemas"
+5, "Ingenieria Electronica"
+5, "Ingenieria Civil"
+e, "Primero"
+e, "Segundo"
+e, "Tercero"
+e, "Cuarto"
+e, "Quinto"
+e, "Sexto"
+e, "Septimo"
+e, "Octavo"
+e, "Noveno"
+e, "Decimo"
+4, "Bienestar", "Bienestar", 123456789
+4, "Nayives", "Trujillo", 123456789
+4, "Leonardo", "Iglesias", 123456789
+4, "Jordan", "Guillot", 123456789
+4, "Fernando", "Mejia", 123456789
+4, "Betty", "Moreno", 123456789
+4, "Maria", "Martinez", 123456789
+4, "Javier", "Bernier", 123456789
+4, "Gabriel", "Marquez", 123456789
+4, "Rolando", "Beltran", 123456789
+4, "Amanda", "Pasos", 123456789
+4, "Alvaro", "Marriaga", 123456789
+4, "Oscar", "Silva", 123456789
+4, "Deud", "Soto", 123456789
+4, "Jose", "Garcia", 123456789
+4, "Romel", "Oliveros", 123456789
+4, "Jose", "Noguera", 123456789
+4, "Aura", "Polo", 123456789
+4, "Mauricio", "Serrano", 123456789
+4, "Arthur", "Burgos", 123456789
+4, "Omar", "Rodriguez", 123456789
+4, "Carlos", "Robles", 123456789
+4, "Luis", "Duran", 123456789
+4, "Gustavo", "Gonzalez", 123456789
+4, "Victor", "Munive", 123456789
+4, "Juan", "Gonzalez", 123456789
+4, "Tomas", "Campo", 123456789
+4, "Jose", "Egurrola", 123456789
+4, "Luis", "Hernandez", 123456789
+1, "A"
+1, "B"
+1, "C"
+1, "D"
+9, "Logica Matematica", 4
+9, "Calculo Diferencial", 4
+9, "Algoritmia", 3
+9, "Contexto Ingenieria Electronica", 2
+9, "Ingles 1", 3
+9, "Humanidades 1", 2
+9, "Ludica 1", 2 
+9, "Fundamentos Economicos", 2
+9, "Institucional 2", 2
+9, "Fisica 1", 4
+9, "Programacion 1", 4
+9, "Ludica 2", 2
+9, "Emprendimiento", 3
+9, "Institucional 3", 2
+9, "Calculo Integral", 4
+9, "Fisica 2", 4
+9, "Programacion 2", 4
+9, "Ludica 3", 2
+9, "Ecuaciones Diferenciales", 4
+9, "Fisica 3", 4
+9, "Estadistica", 3
+9, "Circuitos 1", 4
+9, "Digitales 1", 4
+9, "Calculo Vectorial", 4
+9, "Fisica Moderna", 4
+9, "Digitales 2", 4
+9, "Circuitos 2", 4
+9, "Electronica 1", 4
+9, "Matematicas Especiales", 4
+9, "Campos Electromagneticos", 4
+9, "Electronica 2", 4
+9, "Circuitos 3", 4
+9, "Señales y Sistemas", 6
+9, "Diseño de Procesadores 1", 6
+9, "Ingenieria Economica", 2
+9, "Institucional 4", 2
+9, "Electronica de Potencia", 6
+9, "Procesamiento de Señales", 4
+9, "Electronica 3", 4
+9, "Maquinas Electricas", 4
+9, "Diseño de Procesadores 2", 6
+9, "Evaluacion de Proyectos", 4
+9, "Etica", 2
+9, "Institucional 5", 2
+9, "Electronica Industrial", 6
+9, "Telecomunicaciones 1", 4
+9, "Instrumentacion", 4
+9, "Control 1", 4
+9, "Implementacion de Productos", 2
+9, "Marco Juridico", 2
+9, "Electiva Profesional 1 Elec", 4
+9, "Seminario de Robotica", 4
+9, "Control 2", 6
+9, "Telecomunicaciones 2", 4
+9, "Conmuatacion", 4
+9, "Gestion Tecnologica", 4
+9, "Electiva Profesional 2 Elec", 4
+9, "Automatizacion", 4
+9, "Modalidad de Grado Elec", 4
+9, "Telecomunicaciones 3", 4
+9, "Teleinformatica", 4
+9, "Institucional 6", 2
+d, "Normal"
+d, "Laboratorio"
+d, "Sala de Sistemas"
+c, "Lab1", 'C', 'Laboratorio'
+c, "Lab2", 'C', 'Laboratorio'
+c, "Lab3", 'C', 'Laboratorio'
+c, "Sala 1", 'C', 'Sala de Sistemas'
+c, "Sala 2", 'C', 'Sala de Sistemas'
+c, "Sala 3", 'C', 'Sala de Sistemas'
+c, "Sala 4", 'C', 'Sala de Sistemas'
+c, "Sala 5", 'C', 'Sala de Sistemas'
+c, "Sala 6", 'C', 'Sala de Sistemas'
+c, "Sala 7", 'C', 'Sala de Sistemas'
+c, "B101", 'B', 'Normal'
+c, "B102", 'B', 'Normal'
+c, "B103", 'B', 'Normal'
+c, "B104", 'B', 'Normal'
+c, "B105", 'B', 'Normal'
+c, "B106", 'B', 'Normal'
+c, "B107", 'B', 'Normal'
+c, "B108", 'B', 'Normal'
+c, "B109", 'B', 'Normal'
+c, "B110", 'B', 'Normal'
+c, "B111", 'B', 'Normal'
+c, "B112", 'B', 'Normal'
+c, "B201", 'B', 'Normal'
+c, "B202", 'B', 'Normal'
+c, "B203", 'B', 'Normal'
+c, "B204", 'B', 'Normal'
+c, "B205", 'B', 'Normal'
+c, "B206", 'B', 'Normal'
+c, "B207", 'B', 'Normal'
+c, "B208", 'B', 'Normal'
+c, "B209", 'B', 'Normal'
+c, "B210", 'B', 'Normal'
+c, "B211", 'B', 'Normal'
+c, "B212", 'B', 'Normal'
+c, "C101", 'C', 'Normal'
+c, "C102", 'C', 'Normal'
+c, "C103", 'C', 'Normal'
+c, "C104", 'C', 'Normal'
+c, "C105", 'C', 'Normal'
+c, "C106", 'C', 'Normal'
+c, "C107", 'C', 'Normal'
+c, "C108", 'C', 'Normal'
+c, "C109", 'C', 'Normal'
+c, "C110", 'C', 'Normal'
+c, "C111", 'C', 'Normal'
+c, "C112", 'C', 'Normal'
+c, "C201", 'C', 'Normal'
+c, "C202", 'C', 'Normal'
+c, "C203", 'C', 'Normal'
+c, "C204", 'C', 'Normal'
+c, "C205", 'C', 'Normal'
+c, "C206", 'C', 'Normal'
+c, "C207", 'C', 'Normal'
+c, "C208", 'C', 'Normal'
+c, "C209", 'C', 'Normal'
+c, "C210", 'C', 'Normal'
+c, "C211", 'C', 'Normal'
+c, "C212", 'C', 'Normal'
+c, "D101", 'D', 'Normal'
+c, "D102", 'D', 'Normal'
+c, "D103", 'D', 'Normal'
+c, "D104", 'D', 'Normal'
+c, "D105", 'D', 'Normal'
+c, "D106", 'D', 'Normal'
+c, "D107", 'D', 'Normal'
+c, "D108", 'D', 'Normal'
+c, "D109", 'D', 'Normal'
+c, "D110", 'D', 'Normal'
+c, "D111", 'D', 'Normal'
+c, "D112", 'D', 'Normal'
+c, "D201", 'D', 'Normal'
+c, "D202", 'D', 'Normal'
+c, "D203", 'D', 'Normal'
+c, "D204", 'D', 'Normal'
+c, "D205", 'D', 'Normal'
+c, "D206", 'D', 'Normal'
+c, "D207", 'D', 'Normal'
+c, "D208", 'D', 'Normal'
+c, "D209", 'D', 'Normal'
+c, "D210", 'D', 'Normal'
+c, "D211", 'D', 'Normal'
+c, "D212", 'D', 'Normal'
+a, "P101IE", 'Primero', 'Ingenieria Electronica'
+a, "P102IE", 'Segundo', 'Ingenieria Electronica'
+a, "P103IE", 'Tercero', 'Ingenieria Electronica'
+a, "P104IE", 'Cuarto', 'Ingenieria Electronica'
+a, "P105IE", 'Quinto', 'Ingenieria Electronica'
+a, "P106IE", 'Sexto', 'Ingenieria Electronica'
+a, "P107IE", 'Septimo', 'Ingenieria Electronica'
+a, "P108IE", 'Octavo', 'Ingenieria Electronica'
+a, "P109IE", 'Noveno', 'Ingenieria Electronica'
+a, "P110IE", 'Decimo', 'Ingenieria Electronica'
+8. 'Lunes', '06:00 - 07:00'
+8. 'Lunes', '07:00 - 08:00'
+8. 'Lunes', '08:00 - 09:00'
+8. 'Lunes', '09:00 - 10:00'
+8. 'Lunes', '10:00 - 11:00'
+8. 'Lunes', '11:00 - 12:00'
+8. 'Lunes', '14:00 - 15:00'
+8. 'Lunes', '15:00 - 16:00'
+8. 'Lunes', '16:00 - 17:00'
+8. 'Lunes', '17:00 - 18:00'
+8. 'Lunes', '18:00 - 19:00'
+8. 'Lunes', '19:00 - 20:00'
+8. 'Lunes', '20:00 - 21:00'
+8. 'Lunes', '21:00 - 22:00'
+8. 'Lunes', '22:00 - 23:00'
+8. 'Martes', '06:00 - 07:00'
+8. 'Martes', '07:00 - 08:00'
+8. 'Martes', '08:00 - 09:00'
+8. 'Martes', '09:00 - 10:00'
+8. 'Martes', '10:00 - 11:00'
+8. 'Martes', '11:00 - 12:00'
+8. 'Martes', '14:00 - 15:00'
+8. 'Martes', '15:00 - 16:00'
+8. 'Martes', '16:00 - 17:00'
+8. 'Martes', '17:00 - 18:00'
+8. 'Martes', '18:00 - 19:00'
+8. 'Martes', '19:00 - 20:00'
+8. 'Martes', '20:00 - 21:00'
+8. 'Martes', '21:00 - 22:00'
+8. 'Martes', '22:00 - 23:00'
+8. 'Miercoles', '06:00 - 07:00'
+8. 'Miercoles', '07:00 - 08:00'
+8. 'Miercoles', '08:00 - 09:00'
+8. 'Miercoles', '09:00 - 10:00'
+8. 'Miercoles', '10:00 - 11:00'
+8. 'Miercoles', '11:00 - 12:00'
+8. 'Miercoles', '14:00 - 15:00'
+8. 'Miercoles', '15:00 - 16:00'
+8. 'Miercoles', '16:00 - 17:00'
+8. 'Miercoles', '17:00 - 18:00'
+8. 'Miercoles', '18:00 - 19:00'
+8. 'Miercoles', '19:00 - 20:00'
+8. 'Miercoles', '20:00 - 21:00'
+8. 'Miercoles', '21:00 - 22:00'
+8. 'Miercoles', '22:00 - 23:00'
+8. 'Jueves', '06:00 - 07:00'
+8. 'Jueves', '07:00 - 08:00'
+8. 'Jueves', '08:00 - 09:00'
+8. 'Jueves', '09:00 - 10:00'
+8. 'Jueves', '10:00 - 11:00'
+8. 'Jueves', '11:00 - 12:00'
+8. 'Jueves', '14:00 - 15:00'
+8. 'Jueves', '15:00 - 16:00'
+8. 'Jueves', '16:00 - 17:00'
+8. 'Jueves', '17:00 - 18:00'
+8. 'Jueves', '18:00 - 19:00'
+8. 'Jueves', '19:00 - 20:00'
+8. 'Jueves', '20:00 - 21:00'
+8. 'Jueves', '21:00 - 22:00'
+8. 'Jueves', '22:00 - 23:00'
+8. 'Viernes', '06:00 - 07:00'
+8. 'Viernes', '07:00 - 08:00'
+8. 'Viernes', '08:00 - 09:00'
+8. 'Viernes', '09:00 - 10:00'
+8. 'Viernes', '10:00 - 11:00'
+8. 'Viernes', '11:00 - 12:00'
+8. 'Viernes', '14:00 - 15:00'
+8. 'Viernes', '15:00 - 16:00'
+8. 'Viernes', '16:00 - 17:00'
+8. 'Viernes', '17:00 - 18:00'
+8. 'Viernes', '18:00 - 19:00'
+8. 'Viernes', '19:00 - 20:00'
+8. 'Viernes', '20:00 - 21:00'
+8. 'Viernes', '21:00 - 22:00'
+8. 'Viernes', '22:00 - 23:00'
+8. 'Sabado', '06:00 - 07:00'
+8. 'Sabado', '07:00 - 08:00'
+8. 'Sabado', '08:00 - 09:00'
+8. 'Sabado', '09:00 - 10:00'
+8. 'Sabado', '10:00 - 11:00'
+8. 'Sabado', '11:00 - 12:00'
+2. '', '', '', 'Nayives Trujillo', 'Logica Matematica', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Nayives Trujillo', 'Logica Matematica', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Nayives Trujillo', 'Logica Matematica', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 2
+2. '', '', '', 'Nayives Trujillo', 'Logica Matematica', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 2
+2. '', '', '', 'Nayives Trujillo', 'Calculo Diferencial', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Nayives Trujillo', 'Calculo Diferencial', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Nayives Trujillo', 'Calculo Diferencial', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 2
+2. '', '', '', 'Nayives Trujillo', 'Calculo Diferencial', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 2
+2. '', '', '', 'Leonardo Iglesias', 'Algoritmia', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Leonardo Iglesias', 'Algoritmia', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Leonardo Iglesias', 'Algoritmia', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 2
+2. '', '', '', 'Jordan Guillot', 'Contexto Ingenieria Electronica', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Jordan Guillot', 'Contexto Ingenieria Electronica', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Fernando Mejia', 'Ingles 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Fernando Mejia', 'Ingles 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Fernando Mejia', 'Ingles 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Betty Moreno', 'Humanidades 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Betty Moreno', 'Humanidades 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Bienestar', 'Ludica 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Bienestar', 'Ludica 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Maria Martinez', 'Fundamentos Economicos', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
+2. '', '', '', 'Maria Martinez', 'Fundamentos Economicos', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
+2. '', '', '', 'Javier Bernier', 'Institucional 2', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
+2. '', '', '', 'Javier Bernier', 'Institucional 2', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
+2. '', '', '', 'Gabriel Marquez', 'Fisica 1', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
+2. '', '', '', 'Gabriel Marquez', 'Fisica 1', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
+2. '', '', '', 'Gabriel Marquez', 'Fisica 1', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 2
+2. '', '', '', 'Gabriel Marquez', 'Fisica 1', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 2
+2. '', '', '', 'Rolando Beltran', 'Programacion 1', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
+2. '', '', '', 'Rolando Beltran', 'Programacion 1', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
+2. '', '', '', 'Rolando Beltran', 'Programacion 1', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 2
+2. '', '', '', 'Rolando Beltran', 'Programacion 1', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 2
+2. '', '', '', 'Bienestar', 'Ludica 2', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
+2. '', '', '', 'Bienestar', 'Ludica 2', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
+2. '', '', '', 'Amanda Pasos', 'Emprendimiento', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Amanda Pasos', 'Emprendimiento', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Amanda Pasos', 'Emprendimiento', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Javier Bernier', 'Institucional 3', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Javier Bernier', 'Institucional 3', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Alvaro Marriaga', 'Calculo Integral', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Alvaro Marriaga', 'Calculo Integral', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Alvaro Marriaga', 'Calculo Integral', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 2
+2. '', '', '', 'Alvaro Marriaga', 'Calculo Integral', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 2
+2. '', '', '', 'Oscar Silva', 'Fisica 2', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Oscar Silva', 'Fisica 2', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Oscar Silva', 'Fisica 2', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 2
+2. '', '', '', 'Oscar Silva', 'Fisica 2', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 2
+2. '', '', '', 'Rolando Beltran', 'Programacion 2', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Rolando Beltran', 'Programacion 2', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Rolando Beltran', 'Programacion 2', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 2
+2. '', '', '', 'Rolando Beltran', 'Programacion 2', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 2
+2. '', '', '', 'Bienestar', 'Ludica 3', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Bienestar', 'Ludica 3', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Deud Soto', 'Ecuaciones Diferenciales', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
+2. '', '', '', 'Deud Soto', 'Ecuaciones Diferenciales', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
+2. '', '', '', 'Deud Soto', 'Ecuaciones Diferenciales', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 2
+2. '', '', '', 'Deud Soto', 'Ecuaciones Diferenciales', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 2
+2. '', '', '', 'Jose Garcia', 'Fisica 3', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
+2. '', '', '', 'Jose Garcia', 'Fisica 3', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
+2. '', '', '', 'Jose Garcia', 'Fisica 3', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 2
+2. '', '', '', 'Jose Garcia', 'Fisica 3', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 2
+2. '', '', '', 'Maria Martinez', 'Estadistica', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
+2. '', '', '', 'Maria Martinez', 'Estadistica', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
+2. '', '', '', 'Maria Martinez', 'Estadistica', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
+2. '', '', '', 'Romel Oliveros', 'Circuitos 1', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
+2. '', '', '', 'Romel Oliveros', 'Circuitos 1', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
+2. '', '', '', 'Romel Oliveros', 'Circuitos 1', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 2
+2. '', '', '', 'Romel Oliveros', 'Circuitos 1', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 2
+2. '', '', '', 'Jose Noguera', 'Digitales 1', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
+2. '', '', '', 'Jose Noguera', 'Digitales 1', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
+2. '', '', '', 'Jose Noguera', 'Digitales 1', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 2
+2. '', '', '', 'Jose Noguera', 'Digitales 1', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 2
+2. '', '', '', 'Deud Soto', 'Calculo Vectorial', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 1
+2. '', '', '', 'Deud Soto', 'Calculo Vectorial', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 1
+2. '', '', '', 'Deud Soto', 'Calculo Vectorial', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 2
+2. '', '', '', 'Deud Soto', 'Calculo Vectorial', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 2
+2. '', '', '', 'Oscar Silva', 'Fisica Moderna', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 1
+2. '', '', '', 'Oscar Silva', 'Fisica Moderna', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 1
+2. '', '', '', 'Oscar Silva', 'Fisica Moderna', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 2
+2. '', '', '', 'Oscar Silva', 'Fisica Moderna', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 2
+2. '', '', '', 'Aura Polo', 'Digitales 2', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 1
+2. '', '', '', 'Aura Polo', 'Digitales 2', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 1
+2. '', '', '', 'Aura Polo', 'Digitales 2', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 2
+2. '', '', '', 'Aura Polo', 'Digitales 2', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 2
+2. '', '', '', 'Mauricio Serrano', 'Circuitos 2', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 1
+2. '', '', '', 'Mauricio Serrano', 'Circuitos 2', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 1
+2. '', '', '', 'Mauricio Serrano', 'Circuitos 2', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 2
+2. '', '', '', 'Mauricio Serrano', 'Circuitos 2', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 2
+2. '', '', '', 'Arthur Burgos', 'Electronica 1', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 1
+2. '', '', '', 'Arthur Burgos', 'Electronica 1', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 1
+2. '', '', '', 'Arthur Burgos', 'Electronica 1', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 2
+2. '', '', '', 'Arthur Burgos', 'Electronica 1', 'Quinto', 'Ingenieria Electronica', 'P105IE', '', 2
+2. '', '', '', 'Deud Soto', 'Matematicas Especiales', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 1
+2. '', '', '', 'Deud Soto', 'Matematicas Especiales', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 1
+2. '', '', '', 'Deud Soto', 'Matematicas Especiales', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 2
+2. '', '', '', 'Deud Soto', 'Matematicas Especiales', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 2
+2. '', '', '', 'Oscar Silva', 'Campos Electromagneticos', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 1
+2. '', '', '', 'Oscar Silva', 'Campos Electromagneticos', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 1
+2. '', '', '', 'Oscar Silva', 'Campos Electromagneticos', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 2
+2. '', '', '', 'Oscar Silva', 'Campos Electromagneticos', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 2
+2. '', '', '', 'Romel Oliveros', 'Electronica 2', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 1
+2. '', '', '', 'Romel Oliveros', 'Electronica 2', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 1
+2. '', '', '', 'Romel Oliveros', 'Electronica 2', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 2
+2. '', '', '', 'Romel Oliveros', 'Electronica 2', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 2
+2. '', '', '', 'Jordan Guillot', 'Circuitos 3', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 1
+2. '', '', '', 'Jordan Guillot', 'Circuitos 3', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 1
+2. '', '', '', 'Jordan Guillot', 'Circuitos 3', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 2
+2. '', '', '', 'Jordan Guillot', 'Circuitos 3', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 2
+2. '', '', '', 'Jordan Guillot', 'Circuitos 3', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 3
+2. '', '', '', 'Jordan Guillot', 'Circuitos 3', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 3
+2. '', '', '', 'Omar Rodriguez', 'Señales y Sistemas', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 1
+2. '', '', '', 'Omar Rodriguez', 'Señales y Sistemas', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 1
+2. '', '', '', 'Omar Rodriguez', 'Señales y Sistemas', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 2
+2. '', '', '', 'Omar Rodriguez', 'Señales y Sistemas', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 2
+2. '', '', '', 'Omar Rodriguez', 'Señales y Sistemas', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 3
+2. '', '', '', 'Omar Rodriguez', 'Señales y Sistemas', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 3
+2. '', '', '', 'Carlos Robles', 'Diseño de Procesadores 1', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 1
+2. '', '', '', 'Carlos Robles', 'Diseño de Procesadores 1', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 1
+2. '', '', '', 'Carlos Robles', 'Diseño de Procesadores 1', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 2
+2. '', '', '', 'Carlos Robles', 'Diseño de Procesadores 1', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 2
+2. '', '', '', 'Carlos Robles', 'Diseño de Procesadores 1', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 3
+2. '', '', '', 'Carlos Robles', 'Diseño de Procesadores 1', 'Sexto', 'Ingenieria Electronica', 'P106IE', '', 3
+2. '', '', '', 'Maria Martinez', 'Ingenieria Economica', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Maria Martinez', 'Ingenieria Economica', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Luis Duran', 'Institucional 4', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Luis Duran', 'Institucional 4', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Gustavo Gonzalez', 'Electronica de Potencia', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Gustavo Gonzalez', 'Electronica de Potencia', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Gustavo Gonzalez', 'Electronica de Potencia', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 2
+2. '', '', '', 'Gustavo Gonzalez', 'Electronica de Potencia', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 2
+2. '', '', '', 'Gustavo Gonzalez', 'Electronica de Potencia', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 3
+2. '', '', '', 'Gustavo Gonzalez', 'Electronica de Potencia', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 3
+2. '', '', '', 'Aura Polo', 'Procesamiento de Señales', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Aura Polo', 'Procesamiento de Señales', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Aura Polo', 'Procesamiento de Señales', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 2
+2. '', '', '', 'Aura Polo', 'Procesamiento de Señales', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 2
+2. '', '', '', 'Romel Oliveros', 'Electronica 3', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Romel Oliveros', 'Electronica 3', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Romel Oliveros', 'Electronica 3', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 2
+2. '', '', '', 'Romel Oliveros', 'Electronica 3', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 2
+2. '', '', '', 'Juan Gonzalez', 'Maquinas Electricas', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Juan Gonzalez', 'Maquinas Electricas', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Juan Gonzalez', 'Maquinas Electricas', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 2
+2. '', '', '', 'Juan Gonzalez', 'Maquinas Electricas', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 2
+2. '', '', '', 'Carlos Robles', 'Diseño de Procesadores 2', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Carlos Robles', 'Diseño de Procesadores 2', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 1
+2. '', '', '', 'Carlos Robles', 'Diseño de Procesadores 2', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 2
+2. '', '', '', 'Carlos Robles', 'Diseño de Procesadores 2', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 2
+2. '', '', '', 'Carlos Robles', 'Diseño de Procesadores 2', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 3
+2. '', '', '', 'Carlos Robles', 'Diseño de Procesadores 2', 'Septimo', 'Ingenieria Electronica', 'P107IE', '', 3
+2. '', '', '', 'Victor Munive', 'Evaluacion de Proyectos', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Victor Munive', 'Evaluacion de Proyectos', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Victor Munive', 'Evaluacion de Proyectos', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 2
+2. '', '', '', 'Victor Munive', 'Evaluacion de Proyectos', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 2
+2. '', '', '', 'Victor Munive', 'Etica', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Victor Munive', 'Etica', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Luis Duran', 'Institucional 5', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Luis Duran', 'Institucional 5', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Gustavo Gonzalez', 'Electronica Industrial', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Gustavo Gonzalez', 'Electronica Industrial', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Gustavo Gonzalez', 'Electronica Industrial', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 2
+2. '', '', '', 'Gustavo Gonzalez', 'Electronica Industrial', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 2
+2. '', '', '', 'Gustavo Gonzalez', 'Electronica Industrial', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 3
+2. '', '', '', 'Gustavo Gonzalez', 'Electronica Industrial', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 3
+2. '', '', '', 'Arthur Burgos', 'Telecomunicaciones 1', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Arthur Burgos', 'Telecomunicaciones 1', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Arthur Burgos', 'Telecomunicaciones 1', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 2
+2. '', '', '', 'Arthur Burgos', 'Telecomunicaciones 1', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 2
+2. '', '', '', 'Juan Gonzalez', 'Instrumentacion', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Juan Gonzalez', 'Instrumentacion', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Juan Gonzalez', 'Instrumentacion', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 2
+2. '', '', '', 'Juan Gonzalez', 'Instrumentacion', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 2
+2. '', '', '', 'Jordan Guillot', 'Control 1', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Jordan Guillot', 'Control 1', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 1
+2. '', '', '', 'Jordan Guillot', 'Control 1', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 2
+2. '', '', '', 'Jordan Guillot', 'Control 1', 'Octavo', 'Ingenieria Electronica', 'P108IE', '', 2
+2. '', '', '', 'Jordan Guillot', 'Implementacion de Productos', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Jordan Guillot', 'Implementacion de Productos', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Victor Munive', 'Marco Juridico', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Victor Munive', 'Marco Juridico', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Mauricio Serrano', 'Electiva Profesional 1', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Mauricio Serrano', 'Electiva Profesional 1', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Mauricio Serrano', 'Electiva Profesional 1', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 2
+2. '', '', '', 'Mauricio Serrano', 'Electiva Profesional 1', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 2
+2. '', '', '', 'Jose Noguera', 'Seminario de Robotica', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Jose Noguera', 'Seminario de Robotica', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Jose Noguera', 'Seminario de Robotica', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 2
+2. '', '', '', 'Jose Noguera', 'Seminario de Robotica', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 2
+2. '', '', '', 'Omar Rodriguez', 'Control 2', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Omar Rodriguez', 'Control 2', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Omar Rodriguez', 'Control 2', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 2
+2. '', '', '', 'Omar Rodriguez', 'Control 2', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 2
+2. '', '', '', 'Omar Rodriguez', 'Control 2', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 3
+2. '', '', '', 'Omar Rodriguez', 'Control 2', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 3
+2. '', '', '', 'Arthur Burgos', 'Telecomunicaciones 2', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Arthur Burgos', 'Telecomunicaciones 2', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Arthur Burgos', 'Telecomunicaciones 2', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 2
+2. '', '', '', 'Arthur Burgos', 'Telecomunicaciones 2', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 2
+2. '', '', '', 'Tomas Campo', 'Conmutacion', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Tomas Campo', 'Conmutacion', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 1
+2. '', '', '', 'Tomas Campo', 'Conmutacion', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 2
+2. '', '', '', 'Tomas Campo', 'Conmutacion', 'Noveno', 'Ingenieria Electronica', 'P109IE', '', 2
+2. '', '', '', 'Jose Egurrola', 'Gestion Tecnologica', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Jose Egurrola', 'Gestion Tecnologica', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Jose Egurrola', 'Gestion Tecnologica', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 2
+2. '', '', '', 'Jose Egurrola', 'Gestion Tecnologica', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 2
+2. '', '', '', 'Mauricio Serrano', 'Electiva Profesional 2', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Mauricio Serrano', 'Electiva Profesional 2', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Mauricio Serrano', 'Electiva Profesional 2', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 2
+2. '', '', '', 'Mauricio Serrano', 'Electiva Profesional 2', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 2
+2. '', '', '', 'Juan Gonzalez', 'Automatizacion', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Juan Gonzalez', 'Automatizacion', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Juan Gonzalez', 'Automatizacion', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 2
+2. '', '', '', 'Juan Gonzalez', 'Automatizacion', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 2
+2. '', '', '', 'Luis Hernandez', 'Modalidad de Grado', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Luis Hernandez', 'Modalidad de Grado', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Luis Hernandez', 'Modalidad de Grado', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 2
+2. '', '', '', 'Luis Hernandez', 'Modalidad de Grado', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 2
+2. '', '', '', 'Arthur Burgos', 'Telecomunicaciones 3', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Arthur Burgos', 'Telecomunicaciones 3', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Arthur Burgos', 'Telecomunicaciones 3', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 2
+2. '', '', '', 'Arthur Burgos', 'Telecomunicaciones 3', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 2
+2. '', '', '', 'Tomas Campo', 'Teleinformatica', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Tomas Campo', 'Teleinformatica', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Tomas Campo', 'Teleinformatica', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 2
+2. '', '', '', 'Tomas Campo', 'Teleinformatica', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 2
+2. '', '', '', 'Amanda Pasos', 'Institucional 6', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1
+2. '', '', '', 'Amanda Pasos', 'Institucional 6', 'Decimo', 'Ingenieria Electronica', 'P110IE', '', 1

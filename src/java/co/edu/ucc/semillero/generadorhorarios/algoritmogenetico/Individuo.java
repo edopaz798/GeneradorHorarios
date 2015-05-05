@@ -11,11 +11,13 @@ import co.edu.ucc.semillero.generadorhorarios.modelo.Hora;
 import co.edu.ucc.semillero.generadorhorarios.modelo.Salon;
 import java.util.List;
 import java.util.Random;
-import javax.annotation.PostConstruct;
 
 /**
+ * Clase que representa el funcionamiento de los Individuos
  *
- * @author Eduardo
+ * @author Eduardo Paz
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public class Individuo {
 
@@ -23,67 +25,110 @@ public class Individuo {
     private Long[] genes;
     private int genesSize;
 
-    
     /**
+     * Metodo constructor que obtiene como parametro la cantidad de genes que va
+     * a contener este individuo y lo asigna a las variables de clase, ademas
+     * instancia la cadena que los va a contener con este mismo tamaño
      *
+     * @param genesSize variable de tipo int que contiene la cantidad de genes
+     * para este individuo
+     * @since 1.0.0
      */
-    public Individuo(){
-        
-    }
-    
-    public Individuo(int genesSize){
+    public Individuo(int genesSize) {
+        this.genesSize = genesSize;
         this.genes = new Long[genesSize];
     }
 
     /**
+     * Constructor vacio para la generacion de un nuevo individuo
      *
-     * @return
+     * @since 1.0.0
+     */
+    public Individuo() {
+
+    }
+
+    /**
+     ** Metodo para obtener el valor actual de la variable valorFitness que es
+     * de tipo int
+     *
+     * @return retorna la variable valorFitness
+     * @since 1.0.0
      */
     public int getValorFitness() {
         return valorFitness;
     }
 
     /**
+     * Metodo para guardar los valores de tipo int en la variable valorFitness.
      *
-     * @param valorFitness
+     * @param valorFitness int a guardar
+     * @since 1.0.0
      */
     public void setValorFitness(int valorFitness) {
         this.valorFitness = valorFitness;
     }
 
     /**
+     * Metodo para obtener un gen especifico de este individuo
      *
-     * @param index
-     * @return
+     * @param i variable de tipo int que indica el indice del gen a buscar
+     * @return retorna el gen que ha sido indicado por la variable i
+     * @since 1.0.0
      */
-    public Long getGene(int index) {
-        return genes[index];
+    public Long getGene(int i) {
+        return genes[i];
     }
 
     /**
+     * Metodo para guardar un gen nuevo en una ubicacion determinada por la
+     * variable i
      *
-     * @param index
-     * @param gene
+     * @param i variable de tipo int que indica la poscione donde sera guardado
+     * el gen nuevo
+     * @param gen variable de tipo Long que indica el valor del nuevo gen que se
+     * va a guardar
+     * @since 1.0.0
      */
-    public void setGene(int index, Long gene) {
-        this.genes[index] = gene;
+    public void setGene(int i, Long gen) {
+        this.genes[i] = gen;
     }
 
     /**
+     * Metodo para obtner el tamaño actual de la cadena de genes
      *
-     * @return
+     * @return retorna un int con el tamaño del array genes
+     * @since 1.0.0
      */
     public int getGenesSize() {
         return genes.length;
     }
 
+    /**
+     * Metodo para guardar el valor de la variable genesSize que es de tipo
+     * entero
+     *
+     * @param genesSize valor asignado a la variable de clase genesSize de tipo
+     * entero
+     * @since 1.0.0
+     */
     public void setGenesSize(int genesSize) {
         this.genesSize = genesSize;
     }
-    
-    
+
     /**
+     * Metodo que se encarga de la generacion aleatorio de los genes para las
+     * variables de dia, hora y salon, usando generadores de numeros aleatorios
      *
+     * @param detalleHorarios variable de tipo List(DetalleHorario) que contiene
+     * todas las ocurrencies de tipo DetalleHorario dentro de la base de datos
+     * @param dias variable de tipo List(Dia) que contiene todas las ocurrencies
+     * de tipo Dia dentro de la base de datos
+     * @param horas variable de tipo List(Hora) que contiene todas las
+     * ocurrencies de tipo Hora dentro de la base de datos
+     * @param salones variable de tipo List(Salon) que contiene todas las
+     * ocurrencies de tipo Salon dentro de la base de datos
+     * @since 1.0.0
      */
     public void genesAleatorios(List<DetalleHorario> detalleHorarios, List<Dia> dias, List<Hora> horas, List<Salon> salones) { // pobla la cadena de genes con los valores que componen el individuo.
         int genActual = 0;
@@ -95,37 +140,40 @@ public class Individuo {
 
         for (int i = 0; i < detalleHorarios.size(); ++i) {
             genes[genActual] = dias.get(randDia.nextInt(dias.size())).getId();
-            //System.out.println("i: "+i+", Dia: "+genes[genActual]);
             genActual++;
             genes[genActual] = horas.get(randHora.nextInt(horas.size())).getId();
-            //System.out.println("i: "+i+", Hora: "+genes[genActual]);
             genActual++;
             genes[genActual] = salones.get(randSalon.nextInt(salones.size())).getId();
-            //System.out.println("i: "+i+", Salon: "+genes[genActual]);
             genActual++;
             genes[genActual] = detalleHorarios.get(i).getDocente().getId();
-            //System.out.println("i: "+i+", Docente: "+genes[genActual]);
             genActual++;
             genes[genActual] = detalleHorarios.get(i).getMateria().getId();
-            //System.out.println("i: "+i+", Materia: "+genes[genActual]);
             genActual++;
             genes[genActual] = detalleHorarios.get(i).getSemestre().getId();
-            //System.out.println("i: "+i+", Semestre: "+genes[genActual]);
             genActual++;
             genes[genActual] = detalleHorarios.get(i).getFacultad().getId();
-            //System.out.println("i: "+i+", Facultad: "+genes[genActual]);
             genActual++;
             genes[genActual] = detalleHorarios.get(i).getParalelo().getId();
-            //System.out.println("i: "+i+", Paralelo: "+genes[genActual]);
             genActual++;
             genes[genActual] = Long.parseLong("" + detalleHorarios.get(i).getSesion());
-            //System.out.println("i: "+i+", Sesion: "+genes[genActual]);
             genActual++;
         }
     }
 
     /**
+     * Metodo que se encarga de mutar aleatoriamente los genes de Dia, Hora y
+     * Salon de un individuo para generar un nuevo individuo con una carga
+     * genetica totalmente nueva en estos tres genes
      *
+     * @param detalleHorarios variable de tipo List(DetalleHorario) que contiene
+     * todas las ocurrencies de tipo DetalleHorario dentro de la base de datos
+     * @param dias variable de tipo List(Dia) que contiene todas las ocurrencies
+     * de tipo Dia dentro de la base de datos
+     * @param horas variable de tipo List(Hora) que contiene todas las
+     * ocurrencies de tipo Hora dentro de la base de datos
+     * @param salones variable de tipo List(Salon) que contiene todas las
+     * ocurrencies de tipo Salon dentro de la base de datos
+     * @since 1.0.0
      */
     public void mutacion(List<DetalleHorario> detalleHorarios, List<Dia> dias, List<Hora> horas, List<Salon> salones) { // Selecciona una seccion de genes aleatoriamente y cambia dia, hora y salon asignados.
         Random randGen = new Random();
@@ -143,8 +191,13 @@ public class Individuo {
     }
 
     /**
+     * Metodo encargado de evaluar el individuo con respecto al modelo
+     * matematico establecido, entre menor sea el valor resultante de este
+     * metodo, mejor sera el individuo como posible solucion
      *
-     * @return
+     * @return retorna la variable valorFitness con la calificacion de este
+     * individuo
+     * @since 1.0.0
      */
     public int evaluar() { // Pendiente
         Random randFitness = new Random();

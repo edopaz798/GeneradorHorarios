@@ -15,7 +15,7 @@ import javax.persistence.ManyToOne;
 /**
  * Clase que repesenta la entidad HorarioLaborable
  *
- * @author Eduardo
+ * @author Eduardo Paz
  * @version 1.0.0
  * @since 1.0.0
  */

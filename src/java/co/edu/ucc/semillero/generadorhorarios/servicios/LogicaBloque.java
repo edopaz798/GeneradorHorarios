@@ -14,7 +14,7 @@ import javax.persistence.PersistenceContext;
 /**
  * Clase que repesenta la parte logica de la entidad Bloque
  *
- * @author Eduardo
+ * @author Eduardo Paz
  * @version 1.0.0
  * @since 1.0.0
  */

@@ -19,7 +19,7 @@ import javax.faces.context.FacesContext;
 /**
  * Clase que repesenta el Managed Bean de la entidad Materia
  *
- * @author Eduardo
+ * @author Eduardo Paz
  * @version 1.0.0
  * @since 1.0.0
  */

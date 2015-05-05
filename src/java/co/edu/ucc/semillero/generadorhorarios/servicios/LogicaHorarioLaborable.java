@@ -13,8 +13,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 /**
- *
- * @author Eduardo
+ *Clase que repesenta la parte logica de la entidad HorarioLaborable
+ * 
+ * @author Eduardo Paz
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @Stateless
 public class LogicaHorarioLaborable {
@@ -22,10 +25,12 @@ public class LogicaHorarioLaborable {
     @PersistenceContext(unitName = "GeneradorHorariosPU")
     private EntityManager em;
 
-    /**
+     /**
+     * Metodo que guardar el objeto c de tipo Horario en la base de datos
      *
-     * @param c
-     * @return
+     * @param c Horario a guardar
+     * @return falso o verdadero, dependiendo de si se guarda satisfactoriamente
+     * la informacion o no
      */
     public boolean guardar(HorarioLaborable c) {
         try {
@@ -42,17 +47,23 @@ public class LogicaHorarioLaborable {
     }
 
     /**
+     * Metodo que consulta y devuelve un objeto List(HorarioLaborable) con todas las
+     * indidencias dentro de la tabla HorarioLaborable
      *
-     * @return
+     * @return Lista(HorarioLaborable) con todas las incidencias encontradas
      */
     public List<HorarioLaborable> consultarHorarioLaborables() {
         return em.createQuery("Select c from HorarioLaborable c").getResultList();
     }
 
     /**
+     * Metedo que compara la variable de tipo HorarioLaborable c con todas las
+     * incidencias de la table HorarioLaborable dentro de la base de datos y la elimina
+     * de encontrarla
      *
-     * @param c
-     * @return
+     * @param c HorarioLaborable a eliminar
+     * @return falso o verdadero, dependiendo de si encuentra el objeto a
+     * eliminar o no
      */
     public boolean eliminar(HorarioLaborable c) {
         try {

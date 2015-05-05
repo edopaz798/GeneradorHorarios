@@ -18,8 +18,11 @@ import javax.faces.bean.ViewScoped;
 import org.apache.commons.io.FileUtils;
 
 /**
+ * Clase para importar los datos de prueba
  *
- * @author Eduardo
+ * @author Eduardo Paz
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @ManagedBean(name = "mbImportarDatos")
 @ViewScoped
@@ -61,8 +64,13 @@ public class ImportarDatos implements Serializable {
     List<SalonTipo> listaSalonTipos;
 
     /**
+     * Metodo que importa los datos de el archivo de texto referenciado y los
+     * agrega a la base de datos usando una convencion particular, escrita para
+     * este mismo proposito y descrita dentro del archivo datos.txt que se
+     * encuentra en las fuentes del proyecto
      *
-     * @param args
+     * @return null para todos los casos
+     * @since 1.0.0
      */
     public String importar() {
 

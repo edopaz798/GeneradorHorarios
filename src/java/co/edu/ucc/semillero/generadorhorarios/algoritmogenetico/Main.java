@@ -8,7 +8,6 @@ package co.edu.ucc.semillero.generadorhorarios.algoritmogenetico;
 import co.edu.ucc.semillero.generadorhorarios.modelo.DetalleHorario;
 import co.edu.ucc.semillero.generadorhorarios.modelo.Dia;
 import co.edu.ucc.semillero.generadorhorarios.modelo.Hora;
-import co.edu.ucc.semillero.generadorhorarios.modelo.HorarioLaborable;
 import co.edu.ucc.semillero.generadorhorarios.modelo.Salon;
 import co.edu.ucc.semillero.generadorhorarios.servicios.*;
 import java.util.List;
@@ -18,15 +17,19 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 /**
+ * Clase para ejecutar las pruebas, donde se encuentras los parametros de
+ * ejecucion
  *
- * @author Eduardo
+ * @author Eduardo Paz
+ * @version 1.0.0
+ * @since 1.0.0
  */
 @ManagedBean(name = "mbMain")
 @ViewScoped
 public class Main {
 
-    final static int INDIV_ELITE = 5;
-    final static int TAMANO_POBLACION = 200 + INDIV_ELITE;  // tamano de la poblacion
+    final static int INDIVIDUO_ELITE = 5;
+    final static int TAMANO_POBLACION = 200 + INDIVIDUO_ELITE;  // tamano de la poblacion
     final static int MAX_ITERACIONES = 2000;             // numero maximo de iteraciones
     final static double TASA_MUTACION = 0.05;     // probabilidad de mutaciones
     final static double TASA_CRUZAMIENTO = 0.7;     // probabilidad de cruzamientos
@@ -38,7 +41,6 @@ public class Main {
     private List<Hora> horas;
     private List<Salon> salones;
 
-
     @EJB
     private LogicaDetalleHorario logicaDetalleHorario;
     @EJB
@@ -48,22 +50,28 @@ public class Main {
     @EJB
     private LogicaSalon logicaSalon;
 
-
     /**
-     * Creates a new instance of Main
+     * Metodo que inicializa las listas que contienen los datos presentes en la
+     * base de datos
+     *
+     * @since 1.0.0
      */
-
     public void iniciar() {
-        detalleHorarios = logicaDetalleHorario.consultarDetalleHorarios();        
+        detalleHorarios = logicaDetalleHorario.consultarDetalleHorarios();
         dias = logicaDia.consultarDias();
         horas = logicaHora.consultarHoras();
         salones = logicaSalon.consultarSalons();
     }
 
+    /**
+     * Metodo que ejecuta el algoritmo genetico con los parametros establecidos
+     * para la prueba.
+     * 
+     * @since 1.0.0
+     */
     public void test() {
         iniciar();
         Poblacion pob = new Poblacion(TAMANO_POBLACION, detalleHorarios, dias, horas, salones);
-        pob.iniciar();
         Individuo[] nuevaPoblacion = new Individuo[TAMANO_POBLACION];
         Individuo[] indiv = new Individuo[2];
 
@@ -77,7 +85,7 @@ public class Main {
             count = 0;
 
             // Elitismo
-            for (int i = 0; i < INDIV_ELITE; ++i) {
+            for (int i = 0; i < INDIVIDUO_ELITE; ++i) {
                 nuevaPoblacion[count] = pob.mejorIndividuo();
                 count++;
             }
@@ -88,7 +96,7 @@ public class Main {
                 indiv[0] = pob.ruleta();
                 indiv[1] = pob.ruleta();
 
-                // cruzamiento
+                // Cruzamiento
                 if (random.nextDouble() < TASA_CRUZAMIENTO) {
                     indiv = pob.cruze(indiv[0], indiv[1]);
                 }

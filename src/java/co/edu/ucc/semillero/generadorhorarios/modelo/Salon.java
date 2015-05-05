@@ -17,7 +17,7 @@ import javax.persistence.OneToMany;
 /**
  * Clase que repesenta la entidad Salon
  *
- * @author Eduardo
+ * @author Eduardo Paz
  * @version 1.0.0
  * @since 1.0.0
  */

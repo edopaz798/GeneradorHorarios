@@ -1,4 +1,4 @@
-// Archivo para carga de datos
+﻿// Archivo para carga de datos
 // Estas lineas seran ignoradas por el software
 // El primer caracter de la linea significa el tipo de dato a guardar
 // 1. Bloque [*]
@@ -101,7 +101,7 @@ e, "Decimo"
 9, "Contexto Ingenieria Electronica", 2
 9, "Ingles 1", 3
 9, "Humanidades 1", 2
-9, "Ludica 1", 2 
+9, "Ludica 1", 2
 9, "Fundamentos Economicos", 2
 9, "Institucional 2", 2
 9, "Fisica 1", 4
@@ -145,15 +145,15 @@ e, "Decimo"
 9, "Control 1", 4
 9, "Implementacion de Productos", 2
 9, "Marco Juridico", 2
-9, "Electiva Profesional 1 Elec", 4
+9, "Electiva Profesional 1", 4
 9, "Seminario de Robotica", 4
 9, "Control 2", 6
 9, "Telecomunicaciones 2", 4
-9, "Conmuatacion", 4
+9, "Conmutacion", 4
 9, "Gestion Tecnologica", 4
-9, "Electiva Profesional 2 Elec", 4
+9, "Electiva Profesional 2", 4
 9, "Automatizacion", 4
-9, "Modalidad de Grado Elec", 4
+9, "Modalidad de Grado", 4
 9, "Telecomunicaciones 3", 4
 9, "Teleinformatica", 4
 9, "Institucional 6", 2
@@ -351,8 +351,8 @@ a, "P110IE", 'Decimo', 'Ingenieria Electronica'
 2. '', '', '', 'Fernando Mejia', 'Ingles 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
 2. '', '', '', 'Betty Moreno', 'Humanidades 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
 2. '', '', '', 'Betty Moreno', 'Humanidades 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
-2. '', '', '', 'Bienestar', 'Ludica 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
-2. '', '', '', 'Bienestar', 'Ludica 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Bienestar Bienestar', 'Ludica 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
+2. '', '', '', 'Bienestar Bienestar', 'Ludica 1', 'Primero', 'Ingenieria Electronica', 'P101IE', '', 1
 2. '', '', '', 'Maria Martinez', 'Fundamentos Economicos', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
 2. '', '', '', 'Maria Martinez', 'Fundamentos Economicos', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
 2. '', '', '', 'Javier Bernier', 'Institucional 2', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
@@ -365,8 +365,8 @@ a, "P110IE", 'Decimo', 'Ingenieria Electronica'
 2. '', '', '', 'Rolando Beltran', 'Programacion 1', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
 2. '', '', '', 'Rolando Beltran', 'Programacion 1', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 2
 2. '', '', '', 'Rolando Beltran', 'Programacion 1', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 2
-2. '', '', '', 'Bienestar', 'Ludica 2', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
-2. '', '', '', 'Bienestar', 'Ludica 2', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
+2. '', '', '', 'Bienestar Bienestar', 'Ludica 2', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
+2. '', '', '', 'Bienestar Bienestar', 'Ludica 2', 'Segundo', 'Ingenieria Electronica', 'P102IE', '', 1
 2. '', '', '', 'Amanda Pasos', 'Emprendimiento', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
 2. '', '', '', 'Amanda Pasos', 'Emprendimiento', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
 2. '', '', '', 'Amanda Pasos', 'Emprendimiento', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
@@ -384,8 +384,8 @@ a, "P110IE", 'Decimo', 'Ingenieria Electronica'
 2. '', '', '', 'Rolando Beltran', 'Programacion 2', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
 2. '', '', '', 'Rolando Beltran', 'Programacion 2', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 2
 2. '', '', '', 'Rolando Beltran', 'Programacion 2', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 2
-2. '', '', '', 'Bienestar', 'Ludica 3', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
-2. '', '', '', 'Bienestar', 'Ludica 3', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Bienestar Bienestar', 'Ludica 3', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
+2. '', '', '', 'Bienestar Bienestar', 'Ludica 3', 'Tercero', 'Ingenieria Electronica', 'P103IE', '', 1
 2. '', '', '', 'Deud Soto', 'Ecuaciones Diferenciales', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
 2. '', '', '', 'Deud Soto', 'Ecuaciones Diferenciales', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 1
 2. '', '', '', 'Deud Soto', 'Ecuaciones Diferenciales', 'Cuarto', 'Ingenieria Electronica', 'P104IE', '', 2
